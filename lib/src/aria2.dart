@@ -135,12 +135,10 @@ class Aria2 {
   /// If the function returns, it is with a parsed JSON response.
   Future<List<dynamic>> invokeRpc(
     String function, {
-    Map<String, dynamic> params,
+    List params,
     Duration timeout = _kRpcTimeout,
   }) async {
-    final args = params ?? <String, dynamic>{};
-    args['token'] = '$secret';
-    print(args);
+    final args = <dynamic>['token:$secret']..addAll(params ?? []);
     final List<dynamic> result = await _peer
       .sendRequest(function, args)
       .timeout(timeout, onTimeout: () {
