@@ -133,14 +133,14 @@ class Aria2 {
   /// When `timeout` is set and reached, throws a [TimeoutException].
   ///
   /// If the function returns, it is with a parsed JSON response.
-  Future<List<dynamic>> invokeRpc(
+  Future invokeRpc(
     String function, {
-    List params,
+    List params = const [],
     Duration timeout = _kRpcTimeout,
   }) async {
-    final args = <dynamic>['token:$secret']..addAll(params ?? []);
-    final List<dynamic> result = await _peer
-      .sendRequest(function, args)
+    final args = <dynamic>['token:$secret']..addAll(params);
+    final result = await _peer
+      .sendRequest(function, removeNulls(args).toList())
       .timeout(timeout, onTimeout: () {
         throw TimeoutException(
           'Peer connection timed out during RPC call',
@@ -150,6 +150,9 @@ class Aria2 {
     return result;
   }
 
+  void registerMethod(String method, Function callback) =>
+      _peer.registerMethod(method, callback);
+
   /// Disconnects from the Aria2 Server Service.
   ///
   /// After this function completes this object is no longer usable.
@@ -157,3 +160,6 @@ class Aria2 {
     await _peer?.close();
   }
 }
+
+Iterable<A> removeNulls<A>(Iterable<A> list) =>
+    list.where((item) => item != null);
