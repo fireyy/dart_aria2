@@ -120,13 +120,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.16.0"
-  cupertino_icons:
-    dependency: "direct main"
-    description:
-      name: cupertino_icons
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.1.2"
   dart_style:
     dependency: transitive
     description:
@@ -210,7 +203,7 @@ packages:
     source: hosted
     version: "0.6.1+1"
   json_annotation:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: json_annotation
       url: "https://pub.flutter-io.cn"
@@ -223,13 +216,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.1.0"
-  json_serializable:
-    dependency: "direct dev"
-    description:
-      name: json_serializable
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.2.1"
   kernel:
     dependency: transitive
     description:
@@ -340,13 +326,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
-  source_gen:
-    dependency: transitive
-    description:
-      name: source_gen
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.9.4+2"
   source_span:
     dependency: transitive
     description:
@@ -362,7 +341,7 @@ packages:
     source: hosted
     version: "1.9.3"
   stream_channel:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: stream_channel
       url: "https://pub.flutter-io.cn"
