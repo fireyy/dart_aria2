@@ -1,7 +1,7 @@
 library flutter_aria2;
 import 'dart:async';
 
-import 'package:flutter_aria2/src/aria2.dart';
+import 'src/aria2.dart';
 export 'src/aria2.dart';
 
 const Duration _kDartVmConnectionTimeout = Duration(seconds: 9);
