@@ -1,6 +1,6 @@
-# flutter_aria2
+# dart_aria2
 
-Use "JSON-RPC 2.0" to connect Aria2.
+A Dart implementation use "JSON-RPC 2.0" to connect Aria2.
 
 ### Dependencies
 
@@ -10,7 +10,7 @@ Use "JSON-RPC 2.0" to connect Aria2.
 ### Getting Started
 
 ```dart
-final _aria2 = await FlutterAria2().open('ws://127.0.0.1:6800/jsonrpc', 'passu');
+final _aria2 = await DartAria2().open('ws://127.0.0.1:6800/jsonrpc', 'passu');
 
 // aria2.tellActive
 final resp = await _aria2.invokeRpc('aria2.tellActive');

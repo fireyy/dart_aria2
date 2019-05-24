@@ -1,5 +1,5 @@
-name: flutter_aria2
-description: Use "JSON-RPC 2.0" to connect Aria2.
+name: dart_aria2
+description: A Dart implementation use "JSON-RPC 2.0" to connect Aria2.
 version: 1.0.0+1
 
 environment:

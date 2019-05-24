@@ -6,8 +6,8 @@ export 'src/aria2.dart';
 
 const Duration _kDartVmConnectionTimeout = Duration(seconds: 9);
 
-class FlutterAria2 {
-  FlutterAria2();
+class DartAria2 {
+  DartAria2();
 
   Aria2 _aria2;
 
